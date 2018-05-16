@@ -34,7 +34,6 @@ Or install it yourself as:
 ```
 
 ## Example
-  $ CmpText::Analysis.txt_cmp('我来自武汉','我来自中国') # => 0.6
 
 例如直接输入两个字符串:
 
@@ -48,6 +47,7 @@ Or install it yourself as:
 CmpText::Analysis.print('我来自武汉','我来自中国')
 ```
 
+结果:
 ```ruby
 {
   :result => "匹配度是 60.0%",
