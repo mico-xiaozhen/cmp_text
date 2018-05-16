@@ -22,28 +22,28 @@ Or install it yourself as:
 
 ## Usage
 
-  CmpText::Analysis.txt_cmp(file_1, file_2)
+  $ CmpText::Analysis.txt_cmp(file_1, file_2)
 or
-  CmpText::Analysis.txt_cmp(str_1, str_2)
+  $ CmpText::Analysis.txt_cmp(str_1, str_2)
 
-  CmpText::Analysis.txt_cmp('我来自武汉','我来自中国') # => 0.6
+## Example
+  $ CmpText::Analysis.txt_cmp('我来自武汉','我来自中国') # => 0.6
 
-  CmpText::Analysis.print('我来自武汉','我来自中国')
-# =>
-# {
-#    :result => "匹配度是 60.0%",
-#      :data => {
-#          :or_text_1 => "我来自武汉",
-#          :or_text_2 => "我来自中国",
-#          :succ_char => [
-#            [0] "我来自"
-#        ],
-#        :failed_char => [
-#            [0] "中国",
-#            [1] "武汉"
-#        ]
-#    }
-#}
+  $ CmpText::Analysis.print('我来自武汉','我来自中国')
+{
+  :result => "匹配度是 60.0%",
+  :data => {
+    :or_text_1 => "我来自武汉",
+    :or_text_2 => "我来自中国",
+    :succ_char => [
+      [0] "我来自"
+    ],
+    :failed_char => [
+      [0] "中国",
+      [1] "武汉"
+    ]
+  }
+}
 
 ## Development
 
