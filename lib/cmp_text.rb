@@ -47,9 +47,9 @@ module CmpText
           end
         end
 
-        @log_text[:failed_char] << arr_f1_each_char.join << arr_f0_each_char.join
+        @log_text[:failed_char] << arr_f0_each_char.join << arr_f1_each_char.join
+        
         @log_text[:failed_char].delete('')
-
 
         result = @log_text[:succ_char].join.size.to_f / [ @log_text[:or_text_1].size.to_f, @log_text[:or_text_2].size.to_f].max
       end
