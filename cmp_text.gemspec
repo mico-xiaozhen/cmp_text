@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = '比较两个文件中文字相似度,也可以直接比较2段文字'
   spec.description   = '比较两个文件中文字相似度,也可以直接比较2段文字'
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/mico-xiaozhen/cmp_text"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.

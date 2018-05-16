@@ -1,5 +1,5 @@
-# CmpText/mico_xiaozhen
-最新版本 v0.1.2
+# CmpText
+最新版本 0.1.3
 ## Installation
 
 添加这行代码到你的 Gemfile:
