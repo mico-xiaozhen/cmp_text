@@ -12,17 +12,19 @@ module CmpText
       def txt_cmp(f0, f1)
         str_f0, str_f1 = open(f0), open(f1)
 
+        arr_f0_each_char = str_f0.dup.split('')
+        arr_f1_each_char = str_f1.dup.split('')
+        str_f0_size = str_f0.dup.size
+        str_f1_size = str_f1.dup.size
+
+        return 0.00 if [str_f0_size, str_f1_size].max == 0
+
         @log_text = {
           or_text_1: str_f0.dup,
           or_text_2: str_f1.dup,
           succ_char:[],
           failed_char: []
         }
-
-        arr_f0_each_char = str_f0.dup.split('')
-        arr_f1_each_char = str_f1.dup.split('')
-        str_f0_size = str_f0.dup.size
-        str_f1_size = str_f1.dup.size
 
         arr_f0_each_char.each_with_index do |char, index|
           cmp = false
@@ -48,21 +50,19 @@ module CmpText
         end
 
         @log_text[:failed_char] << arr_f0_each_char.join << arr_f1_each_char.join
-        
+
         @log_text[:failed_char].delete('')
 
         result = @log_text[:succ_char].join.size.to_f / [ @log_text[:or_text_1].size.to_f, @log_text[:or_text_2].size.to_f].max
+
+        result.round(2)
       end
 
       def print(f0, f1)
         result = txt_cmp(f0, f1)
 
-        { result: "匹配度是 #{(result * 100).round(3)}%", data: @log_text}
+        { result: "匹配度是 #{(result * 100).round(4)}%", data: @log_text}
       end
     end
   end
 end
-
-
-
-
