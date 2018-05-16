@@ -1,5 +1,5 @@
 # CmpText
-最新版本 0.1.3
+最新版本 0.1.4
 ## Installation
 
 添加这行代码到你的 Gemfile:
@@ -34,7 +34,7 @@ gem 'cmp_text'
 例如直接输入两个字符串:
 
 ```ruby
-  CmpText::Analysis.txt_cmp('我来自武汉','我来自中国') # => 0.6
+  CmpText::Analysis.txt_cmp('我来自武汉','我来自中国') # => 0.60
 ```
 
 或者用print方法打印出JSON结果, 'succ_char'比对成功的部分,'failed_char'比对失败的部分:
